@@ -7,6 +7,9 @@ class Counter extends React.Component {
         this.state = {
             number: props.startNumber
         }
+        this.incHandler = this.incHandler.bind(this)
+        this.decHandler = this.decHandler.bind(this)
+
     }
 
 incHandler()  {
@@ -23,11 +26,11 @@ decHandler()  {
                     {this.state.number}
                 </h1>
                 <Button
-                    onClick={this.incHandler.bind(this)}
+                    onClick={this.incHandler}
                     label={'+'}
                 />
                 <Button
-                    onClick={this.decHandler.bind(this)}
+                    onClick={this.decHandler}
                     label={'-'}
                 />
             </div>
