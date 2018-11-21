@@ -13,10 +13,16 @@ class Counter extends React.Component {
         this.setState({ number: this.state.number - 1 })
     }
     resetHandler = () => {
-        this.setState({ number: this.props.startNumber})
+        this.setState({ number: this.props.startNumber })
     }
-    
+    zeroHandler = () => {
+        this.setState({ number: this.state.number - this.state.number })
 
+    }
+
+    multiHandler = () => {
+        this.setState({ number: this.state.number * this.state.number })
+    }
 
     render() {
         return (
@@ -35,6 +41,14 @@ class Counter extends React.Component {
                 <Button
                     onClick={this.resetHandler}
                     label={'reset'}
+                />
+                <Button
+                    onClick={this.zeroHandler}
+                    label={'zero'}
+                />
+                <Button
+                    onClick={this.multiHandler}
+                    label={'multi'}
                 />
             </div>
 
