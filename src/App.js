@@ -1,15 +1,15 @@
 import React from 'react'
 import Button from './components/Button'
-
+import Paper from './components/Paper'
 
 const App = (props) => (
-  <div>
+  <Paper>
     <Button
-    onClick={() => alert('bu')}
+      onClick={() => alert('bu')}
     />
-<Button
-    onClick={() => alert('bu')}
+    <Button
+      onClick={() => alert('bu')}
     />
-  </div>
+  </Paper>
 )
 export default App

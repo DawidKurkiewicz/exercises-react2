@@ -8,10 +8,10 @@ import App from './App'
 
 
 ReactDOM.render(
-<MuiThemeProvider >
-<App />
-</MuiThemeProvider>,
- document.getElementById('root')
- )
+    <MuiThemeProvider >
+        <App />
+    </MuiThemeProvider>,
+    document.getElementById('root')
+)
 
 
