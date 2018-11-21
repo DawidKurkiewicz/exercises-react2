@@ -1,8 +1,17 @@
 import React from 'react'
+import RaisedButton from 'material-ui/RaisedButton'
 
-const App = () => (
+const style = {
+  margin: 12,
+}
+
+const App = (props) => (
   <div>
-    <h1>hello</h1>
+    <RaisedButton
+    label="Primary"
+    primary={true}
+    style={style}
+    />
   </div>
 )
 export default App
