@@ -3,24 +3,30 @@ import Paper from './components/Paper'
 import Counter from './Counter'
 
 import Navigation from './Navigation/Navigation'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 
 
 const App = (props) => (
   <div>
-    <Navigation
-      label={"JFDDL6"}
-    />
-    <Paper>
-      <Router>
-        <div>
-          <Route path="/Counter" component={() => <Counter startNumber = {5} /> }
+
+
+    <Router>
+      <div>
+        <Navigation
+          label={"JFDDL6"}
+        >
+          <Link to="/">Dashboard</Link>
+          <Link to="/counter">Counter</Link>
+        </Navigation>
+
+       
+          <Route path="/Counter" component={() =>  <Paper><Counter startNumber={5} /> </Paper>}
           />
-          
-        </div>
-      </Router>
-    </Paper>
+       
+      </div>
+    </Router>
+
 
   </div>
 )
