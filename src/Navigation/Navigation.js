@@ -8,11 +8,11 @@ class Navigation extends React.Component {
         isDrawerOpen: false
     }
     toggleDrawer = () => this.setState({ isDrawerOpen: !this.state.isDrawerOpen })
-    render() {
+    render(props) {
         return (
             <div>
                 <AppBar
-                    title="JFDDL6"
+                    title={this.props.label}
                     onLeftIconButtonClick={this.toggleDrawer}
                 />
                 <Drawer

@@ -6,7 +6,9 @@ import Navigation from './Navigation/Navigation'
 
 const App = (props) => (
   <div>
-    <Navigation />
+    <Navigation
+      label={"JFDDL6"}
+    />
     <Paper>
       <Counter
         startNumber={5}
